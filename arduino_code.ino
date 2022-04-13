@@ -51,7 +51,7 @@ void loop() {
     if (temp > 8) {
         //Serial.println("Arranca el sistema de refrigeracion");
         digitalWrite(4, HIGH);
-    } else if (temp = 2) {
+    } else if (temp <= 2) {
         //Serial.println("Para el sistema de refrigeracion");
         digitalWrite(4, LOW);
     }
@@ -73,6 +73,7 @@ void loop() {
         } else {
             if (linea1.indexOf("Med=OFF") > 0) {
                 digitalWrite(2, LOW);
+                digitalWrite(4, LOW);
             }
         }
         
